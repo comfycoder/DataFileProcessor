@@ -58,6 +58,8 @@ namespace DataFileProcessor
                     sqlServerOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(30), errorNumbersToAdd: null);
                 })
             );
+
+            builder.Services.AddScoped<IPersonRepository, PersonRepository>();
         }
 
         /// <summary>

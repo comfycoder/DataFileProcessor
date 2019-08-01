@@ -11,6 +11,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MockData", "MockData", "{F20BA735-678B-48AA-9D67-C9DBACFF9EF6}"
+	ProjectSection(SolutionItems) = preProject
+		MockData\food.txt = MockData\food.txt
+		MockData\MOCK_DATA.csv = MockData\MOCK_DATA.csv
+		MockData\MOCK_DATA.json = MockData\MOCK_DATA.json
+		MockData\MOCK_DATA.sql = MockData\MOCK_DATA.sql
 	EndProjectSection
 EndProject
 Global
