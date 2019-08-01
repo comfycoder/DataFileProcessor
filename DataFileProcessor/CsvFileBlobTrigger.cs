@@ -1,17 +1,11 @@
 using System;
 using System.IO;
 using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
 using CsvHelper;
 using System.Collections.Generic;
-using System.Diagnostics;
 using CsvHelper.Configuration;
-using Microsoft.Extensions.Configuration;
 using DataFileProcessor.Models;
-using Microsoft.EntityFrameworkCore.Storage;
-using System.Threading.Tasks;
-using System.Linq;
 using DataFileProcessor.Services;
 
 // See the following Pluralsight course for information on using the CsvReader class:
@@ -49,8 +43,9 @@ namespace DataFileProcessor
                 csvReader.Configuration.IgnoreBlankLines = true; // Ignore blank lines in file
                 csvReader.Configuration.Delimiter = ","; // Set the field delimiter character
                 csvReader.Configuration.HasHeaderRecord = true; // Ensure a header row exists
-                                                                //csvReader.Configuration.HeaderValidated = null; // Ignore header validation step
-                                                                //csvReader.Configuration.MissingFieldFound = null; // Ignore missing field names
+                //csvReader.Configuration.HeaderValidated = null; // Ignore header validation step
+                //csvReader.Configuration.MissingFieldFound = null; // Ignore missing field names
+                    
                 IEnumerable<Person> records = null;
 
                 try
